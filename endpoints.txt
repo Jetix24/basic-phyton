@@ -1,0 +1,161 @@
+------------ Endpoint steam ------------
+----- GET -----
+GET https//api.steam.com/events
+Accept: application/json
+
+Status code: 200 (OK)
+Content-type: application/json
+{ 
+    "Juegos":[
+    {   
+        "id": 1,
+        "nombre": "Hollow Knight",
+        "fecha": "24-02-17",
+        "precio": 150
+    },
+    {
+        "id": 2,
+        "nombre": "Cuphead",
+        "fecha": "29-09-17",
+        "precio": 300
+    },
+    {
+        "id": 3,
+        "nombre": "Celeste",
+        "fecha": "25-01-18",
+        "precio": 200
+    }]
+}
+
+----- POST -----
+POST https//api.steam.com/events
+Accept: application/json
+
+Body:
+    {
+        "nombre": "Stardew Valley",
+        "fecha": "26-02-16",
+        "precio": 325
+    }
+
+Status Code: 201 (Created)
+Content-type: application/json
+
+    {
+        "id": 4,
+        "nombre": "Stardew Valley",
+        "fecha": "26-02-16",
+        "precio": 325
+    }
+
+----- PUT -----
+PUT https//api.steam.com/events/3
+Accept: application/json
+
+Body:
+{
+    "precio": 250
+}
+
+Status Code: 201 (Created)
+Content-type: application/json
+    {
+        "id": 3,
+        "nombre": "Celeste",
+        "fecha": "25-01-18",
+        "precio": 250
+    }
+
+----- DELETE -----
+DELETE https//api.steam.com/events/3
+Accept: application/json
+
+Status Code: 200 (OK)
+Content-type: application/json
+
+------------ Endpoint steam ------------
+----- GET -----
+GET https//api.steam.com/users
+Accept: application/json
+
+Status code: 200 (OK)
+Content-type: application/json
+{ 
+    "Usuarios":[
+    {   
+        "id": 1,
+        "nombre": "José Pablo",
+        "Apellidos":  "Aguirre Rivera",
+        "usuario": "Jetix",
+        "correo": "josepablo@gmail.com",
+        "contraseña": 12345678
+    },
+    {
+        "id": 2,
+        "nombre": "Fernanda ",
+        "Apellidos":  "Vazquez Muñoz",
+        "usuario": "Gobo",
+        "correo": "Fernanda@gmail.com",
+        "contraseña": 98765432
+    },
+    {
+        "id": 3,
+        "nombre": "Alan",
+        "Apellidos":  "Montes Silva",
+        "usuario": "ShawnMendez",
+        "correo": "Alan@gmail.com",
+        "contraseña": 24680135
+    }]
+}
+
+----- POST -----
+POST https//api.steam.com/users
+Accept: application/json
+
+Body:
+    {
+        "nombre": "Juan",
+        "Apellidos": "Aguirre Rivera",
+        "usuario": "Talion",
+        "correo": "Juan@gmail.com",
+        "contraseña": 123571113
+    }
+
+Status Code: 201 (Created)
+Content-type: application/json
+
+    {
+        "id": 4,
+        "nombre": "Juan",
+        "Apellidos": "Aguirre Rivera",
+        "usuario": "Talion",
+        "correo": "Juan@gmail.com",
+        "contraseña": 123571113
+    }
+
+----- PUT -----
+PUT https//api.steam.com/users/4
+Accept: application/json
+
+Body:
+{
+    "contraseña": 24681012
+}
+
+Status Code: 201 (Created)
+Content-type: application/json
+    {
+        "id": 4,
+        "nombre": "Juan",
+        "Apellidos": "Aguirre Rivera",
+        "usuario": "Talion",
+        "correo": "Juan@gmail.com",
+        "contraseña": 24681012
+    }
+
+----- DELETE -----
+DELETE https//api.steam.com/users/4
+Accept: application/json
+
+Status Code: 200 (OK)
+Content-type: application/json
